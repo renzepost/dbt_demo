@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: hub_customer
+    description: '{{ doc("hub_customer") }}'
+    columns:
+      - name: seq
+        description: unieke sleutel van de hub
+        tests:
+          - unique
+          - not_null
+      - name: businesskey
+        description: businesskey
+        tests:
+          - unique
+          - not_null
+      - name: load_date
+        description: laaddatum
+      - name: record_source
+        description: bronsysteem
+        tests:
+          - accepted_values:
+              values: [TPCH]

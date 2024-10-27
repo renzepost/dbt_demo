@@ -1,0 +1,7 @@
+version: 2
+
+macros:
+  - name: create_sequence
+    description: genereer een sequence met de naam <tabel>_serial
+  - name: get_sequence
+    description: haal de volgende waarde van de sequence <tabel>_serial op
